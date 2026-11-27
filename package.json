@@ -1,0 +1,14 @@
+{
+  "name": "tour-guide",
+  "version": "1.0.0",
+  "description": "Website Tour Guide — full-stack with Node.js, Express, MongoDB",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"npx serve frontend -p 3000 --no-clipboard\"",
+    "start": "cd backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "serve": "^14.2.3"
+  }
+}

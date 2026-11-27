@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Guide — Register</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <span class="logo-icon">🗺️</span>
+        <h1>Join Tour Guide</h1>
+        <p>Create your free account</p>
+      </div>
+
+      <form id="registerForm" class="auth-form">
+        <div id="registerError" class="auth-error hidden"></div>
+        <div id="registerSuccess" class="auth-success hidden"></div>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrapper">
+            <span class="input-icon">✉️</span>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="password" name="password" placeholder="Min. 6 characters" required minlength="6" autocomplete="new-password" />
+            <button type="button" class="toggle-pass" onclick="togglePassword('password')">👁️</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repeat your password" required autocomplete="new-password" />
+            <button type="button" class="toggle-pass" onclick="togglePassword('confirmPassword')">👁️</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full" id="registerBtn">
+          <span class="btn-text">Create Account</span>
+          <span class="btn-loader hidden">⏳</span>
+        </button>
+
+        <p class="auth-footer">
+          Already have an account?
+          <a href="login.html">Sign in →</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
